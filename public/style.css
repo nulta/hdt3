@@ -1,0 +1,237 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard-dynamic-subset.css");
+@font-face {
+    font-family: 'D2Coding';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_three@1.0/D2Coding.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    --color-main-light: #00ffcc;
+    --color-main:       #23cdab;
+    --color-main-dark:  #00a080;
+
+    --font-default: Pretendard, sans-serif; 
+    --font-monospace: D2Coding, monospace;
+}
+
+body {
+    /* background-color: #222;
+    background-image: url("/assets/test_background.png"); */
+    background: #444 url("assets/test_background.png");
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #ccc;
+    min-height: 100vh;
+    margin: 0;
+    font-family: var(--font-default);
+}
+
+
+/* #region General CSS */
+
+    /* <button> */
+
+    button {
+        font-family: inherit;
+
+        color: #333;
+        border-radius: 3px;
+        padding: 5px 6px;
+        font-size: 0.9em;
+        cursor: pointer;
+        transition: ease-in-out 100ms;
+        transition-property: color, border-color, background-color;
+        line-height: 1;
+
+        background-color: transparent;
+        color: #00ca87;
+        border: 1px solid #00ca87;
+    }
+
+    button.text {
+        border: none;
+    }
+
+    button:hover {
+        background-color: #00ffaa33;
+    }
+
+    button:active {
+        border-color: #00ca87;
+        background-color: #00ffaa8a;
+        color: #ffffff;
+    }
+
+
+    /* <input> */
+
+    input {
+        width: 100%;
+        display: block;
+        padding: 5px;
+        margin-bottom: 7px;
+
+        font-size: 0.9em;
+        font-family: D2Coding, monospace;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        transition: 100ms ease-out;
+        transition-property: background-color, color;
+        outline: none;
+    }
+
+    input.inline {
+        width: initial;
+        display: inline-block;
+    }
+
+    input:focus {
+        background-color: #333;
+        color: #fafafa;
+    }
+
+    label {
+        font-size: small;
+    }
+
+
+    /* <code> */
+
+    code {
+        font-family: var(--font-monospace);
+        font-size: 0.9em;
+    }
+
+    code.block {
+        background-color: #333;
+        color: #ccc;
+        display: block;
+        padding: 4px;
+        text-align: left;
+        border-radius: 3px;
+
+        white-space: pre;
+    }
+
+/* #endregion General CSS */
+
+/* #region Custom Classes */
+    /* .centered-page */
+
+    .centered-page {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+    }
+
+    /* .no-margin */
+
+    .no-margin {
+        margin: 0;
+    }
+/* #endregion Custom Classes */
+
+/* #region <Header> */
+    header {
+        display: flex;
+        background: #161616;
+        color: #fff;
+        height: 40px;
+        position: relative;
+        z-index: 1;
+    }
+
+    header > nav {
+        flex: 1;
+        display: flex;
+    }
+
+    header > nav a {
+        padding: 10px;
+        color: #c1a0ff;
+        text-decoration: none;
+    }
+
+    header > nav a:hover {
+        background-color: #292929;
+    }
+
+    header > label {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        color: #ccc;
+        font-size: 80%;
+    }
+
+    header input {
+        border: none;
+        border-radius: 3px;
+        padding: 2px 5px;
+        font-size: 100%;
+    }
+/* #endregion <Header> */
+
+/* #region <Window> */
+    .window {
+        background-color: white;
+        width: fit-content;
+        min-width: 350px;
+        border-radius: 4px;
+        box-shadow: #0005 0 0 10px;
+    }
+
+    .window > .titlebar {
+        background-color: var(--color-main);
+        color: #000;
+        padding: 4px 5px;
+        border-radius: 4px 4px 0 0;
+        text-align: center;
+    }
+
+    .window > .content {
+        padding: 10px;
+        color: #333;
+    }
+
+    .window > .content > p:last-child,
+    .window > .content > h1:last-child,
+    .window > .content > h2:last-child {
+        margin-bottom: 0;
+    }
+
+    /* Modal Window handling */
+
+    #modal {
+        background-color: #0005;
+        backdrop-filter: grayscale(0.2);
+
+        position:fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        z-index: 999;
+    }
+
+    #modal:empty {
+        display: none;
+    }
+
+/* #endregion <Window> */
