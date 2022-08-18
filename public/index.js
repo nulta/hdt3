@@ -5,6 +5,7 @@ import NotFound from './pages/_404.js';
 import Header from './components/header.js';
 import RegisterPage from "./pages/auth/register.js";
 import Redirect from "./pages/redirect.js";
+import ProjectPage from "./pages/project/index.js";
 
 export function App() {
     return (
@@ -15,6 +16,7 @@ export function App() {
                     <Route path="/" component={Redirect} to="/login" />
                     <Route path="/login" component={LoginPage} />
                     <Route path="/register" component={RegisterPage} />
+                    <Route path="/project" component={ProjectPage} />
                     <Route default component={NotFound} />
                 </Router>
             </ErrorBoundary>

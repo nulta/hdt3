@@ -22,7 +22,7 @@ body {
 body {
     /* background-color: #222;
     background-image: url("/assets/test_background.png"); */
-    background: #444 url("assets/test_background.png");
+    background: #444 /*url("assets/test_background.png")*/;
     background-blend-mode: overlay;
     background-size: cover;
     background-repeat: no-repeat;
@@ -141,6 +141,12 @@ body {
         margin: 0;
     }
 /* #endregion Custom Classes */
+
+/* #region Layouts */
+    #root {
+        min-height: 100vh;
+    }
+/* #endregion Layouts */
 
 /* #region <Header> */
     header {
