@@ -14,6 +14,8 @@ body {
     --color-main-light: #00ffcc;
     --color-main:       #23cdab;
     --color-main-dark:  #00a080;
+    --color-hyperlink:  #c1a0ff;
+    --color-background: #222;
 
     --font-default: Pretendard, sans-serif; 
     --font-monospace: D2Coding, monospace;
@@ -26,6 +28,7 @@ body {
     background-blend-mode: overlay;
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     color: #ccc;
     min-height: 100vh;
     margin: 0;
@@ -117,6 +120,17 @@ body {
         border-radius: 3px;
 
         white-space: pre;
+    }
+
+    /* <a href> */
+
+    a, a:link, a:visited {
+        text-decoration: none;
+        color: var(--color-hyperlink);
+    }
+
+    a:hover {
+        text-decoration: underline;
     }
 
 /* #endregion General CSS */
@@ -250,3 +264,25 @@ body {
     }
 
 /* #endregion <Window> */
+
+/* #region Project Page */
+    aside.project-nav {
+        background-color: var(--color-background);
+        border: 1px solid var(--color-main);
+        position: sticky;
+        top: 10px;
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    aside.user-widget {
+        background-color: var(--color-background);
+        border: 1px solid var(--color-main);
+        position: fixed;
+        bottom: 10px;
+        padding: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        /* width: ; */
+    }
+/* #endregion Project Page */

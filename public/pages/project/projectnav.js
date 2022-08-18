@@ -12,7 +12,9 @@ export default function ProjectNav(props) {
 
     return (
         <aside class="project-nav">
-            <a href={projectRoot}>{projectName}</a>
+            <h1>
+                <a href={projectRoot}>{projectName}</a>
+            </h1>
         </aside>
     )
 }
