@@ -22,7 +22,7 @@ body {
 body {
     /* background-color: #222;
     background-image: url("/assets/test_background.png"); */
-    background: #444 /*url("assets/test_background.png")*/;
+    background: #444 url("assets/test_background.png");
     background-blend-mode: overlay;
     background-size: cover;
     background-repeat: no-repeat;
@@ -123,7 +123,6 @@ body {
 
 /* #region Custom Classes */
     /* .centered-page */
-
     .centered-page {
         display: flex;
         align-items: center;
@@ -136,10 +135,20 @@ body {
     }
 
     /* .no-margin */
-
     .no-margin {
         margin: 0;
     }
+
+    /* mouse-drag-box */
+    .mouse-drag-box {
+        position: absolute;
+        background-color: #23cdab88;
+        border: 1px solid var(--color-main-light);
+        border-radius: 3px;
+        z-index: 10;
+        opacity: 0.6;
+    }
+
 /* #endregion Custom Classes */
 
 /* #region Layouts */

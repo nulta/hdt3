@@ -56,10 +56,7 @@ export default function DragSelectHandler() {
     }
 
     if (visible) {
-        return <div style={{
-            position: "absolute", ...calcPos(),
-            background: "#0f32", border: "1px solid #0f36", borderRadius: "3px", zIndex: 10
-        }}></div>
+        return <div style={{...calcPos()}} class="mouse-drag-box"></div>
     } else {
         return null
     }
