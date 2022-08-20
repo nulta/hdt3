@@ -7,10 +7,7 @@ export default function DragSelectHandler() {
     const [visible, setVisible] = useState(false)
 
     useEffect(() => {
-        /**
-         * @param {MouseEvent} ev
-         */
-        const moveCallback = (ev) => {
+        const moveCallback = (ev: MouseEvent) => {
             if (ev.buttons != 1) return;
 
             if (!visible) {
@@ -34,7 +31,7 @@ export default function DragSelectHandler() {
     })
 
     function calcPos() {
-        let left, top, width, height
+        let [left, top, width, height] = [0, 0, 0, 0]
 
         if (endPos[0] < startPos[0]) {
             left = endPos[0]

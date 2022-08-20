@@ -1,21 +1,17 @@
 import { useLocation } from 'preact-iso';
 import { useEffect, useState } from 'preact/hooks';
+import { Project } from '../../classes/project';
 
-/**
- * @param {{project: import("./project_structure").Project}} props
- */
-export default function ProjectNav(props) {
+export default function ProjectNav({project}: {project: Project}) {
     const location = useLocation()
     const projectRoot = location.path.replace(/^(\/projects\/.+?\/).+/, "$1")
-
-    const {id: projectId, name: projectName, desc: projectDesc} = props.project
 
     return (
         <aside class="project-nav">
             <h1>
-                <a href={projectRoot}>{projectName}</a>
+                <a href={projectRoot}>{project.name}</a>
             </h1>
-            <p>{projectDesc}</p>
+            <p>{project.desc}</p>
         </aside>
     )
 }

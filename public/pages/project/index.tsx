@@ -5,9 +5,6 @@ import styles from './style.module.css'
 import UserWidget from './userwidget';
 
 export default function ProjectPage() {
-    const [isModalOpen, setModalOpen] = useState(true)
-    const location = useLocation()
-
     useEffect(() => {document.title = "Project"})
 
     return (
