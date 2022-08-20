@@ -1,12 +1,13 @@
 export default function Window(props) {
+    const {class: classes, name, children, style} = props
 	return (
-		<div class="window">
+		<div class={"window appear-animation " + (classes || "")}>
             <div class="titlebar">
-                {props.name}
+                {name}
             </div>
 
-            <div class="content" style={props.style}>
-                {props.children}
+            <div class="content" style={style}>
+                {children}
             </div>
         </div>
 	);
