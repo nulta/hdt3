@@ -8,6 +8,7 @@ import Redirect from "./pages/redirect.js";
 import ProjectPage from "./pages/project/index.js";
 import UserContext from "./classes/usercontext.js";
 import { User } from "./classes/user.js";
+import ProjectListPage from "./pages/projectlist.js";
 
 export function App() {
     return (
@@ -19,7 +20,8 @@ export function App() {
                         <Route path="/" component={Redirect} to="/login" />
                         <Route path="/login" component={LoginPage} />
                         <Route path="/register" component={RegisterPage} />
-                        <Route path="/project" component={ProjectPage} />
+                        <Route path="/project" component={ProjectListPage} />
+                        <Route path="/project/:projectId*" component={ProjectPage} />
                         <Route default component={NotFound} />
                     </Router>
                 </ErrorBoundary>

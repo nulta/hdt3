@@ -135,6 +135,10 @@ body {
         text-decoration: underline;
     }
 
+    a.link-no-underline:hover, a.link-no-underline:focus {
+        text-decoration: none;
+    }
+
 /* #endregion General CSS */
 
 /* #region Custom Classes */
@@ -164,6 +168,35 @@ body {
         border-radius: 3px;
         z-index: 10;
         opacity: 0.6;
+    }
+
+    /* project-card */
+    .project-card {
+        background-color: #333;
+        color: #ccc;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 4px;
+        box-shadow: 0 0 5px 0px #00000055;
+        transition: all 0.2s;
+    }
+
+    a:focus > .project-card,
+    a:hover > .project-card {
+        background-color: #222;
+        padding-left: 18px;
+    }
+
+    a:active > .project-card {
+        background-color: #111;
+    }
+
+    .project-card > .name {
+        font-weight: 500;
+        color: var(--color-hyperlink);
+        font-size: 1.25em;
+        margin-bottom: 3px;
     }
 
 /* #endregion Custom Classes */
