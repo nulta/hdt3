@@ -159,6 +159,15 @@ body {
     .no-margin {
         margin: 0;
     }
+    .no-margin-bottom {
+        margin-bottom: 0;
+    }
+
+    /* .graytext */
+    .graytext {
+        color: #888;
+        font-size: 75%;
+    }
 
     /* mouse-drag-box */
     .mouse-drag-box {
@@ -266,7 +275,6 @@ body {
     }
 
     .window > .content {
-        padding: 10px;
         color: #333;
     }
 
@@ -274,6 +282,24 @@ body {
     .window > .content > h1:last-child,
     .window > .content > h2:last-child {
         margin-bottom: 0;
+    }
+
+    .window > .content > div,
+    .window > .content > form {
+        padding: 10px;
+    }
+
+    .window > .content > div.button-area {
+        display: flex;
+        flex-direction: row-reverse;
+        width: 100%;
+        justify-content: space-between;
+        padding: 10px;
+        border-top: 1px solid #ddd;
+    }
+
+    .window > .content > div.button-area.no-border {
+        border-top: none;
     }
 
     /* Modal Window handling */
@@ -352,22 +378,22 @@ body {
 
     @keyframes appear-login-to-register {
         from {
-            max-height: 156px;
+            max-height: 130px;
             overflow-y: hidden;
         }
         to {
-            max-height: 247px;
+            max-height: 221px;
             overflow-y: hidden;
         }
     }
 
     @keyframes appear-register-to-login {
         to {
-            min-height: 156px;
+            min-height: 130px;
             overflow-y: hidden;
         }
         from {
-            min-height: 247px;
+            min-height: 221px;
             overflow-y: hidden;
         }
     }
@@ -382,11 +408,11 @@ body {
         animation: unset;
     }
 
-    .appear-animation.login-to-register > .content {
+    .appear-animation.login-to-register > .content > form {
         animation: appear-login-to-register 0.25s;
     }
 
-    .appear-animation.register-to-login > .content {
+    .appear-animation.register-to-login > .content > form {
         animation: appear-register-to-login 0.25s;
     }
 /* #endregion Animations */

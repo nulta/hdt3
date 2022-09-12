@@ -11,14 +11,14 @@ export default function NotFound() {
 
             <div class="centered-page">
                 <Window name="오류가 발생했어요..!" style="text-align: center">
-                    <h1 class="no-margin">404 Not Found</h1>
-                    <p>백엔드 아저씨가 이렇게 전해달래요!</p>
-                    <code class="block">
-                        {`> 아, 우리 라우터 왔어? 뭐 필요한데?\n`}
-                        {`- `}<span style={{color:"#00ffcc"}}>{location.path}</span>{` 페이지를 가져다달래요!\n`}
-                        {`> 응? `}<span style={{color:"#00ffcc"}}>{location.path}</span>{`?\n`}
-                        {`> 우린 그런 페이지 없는디?`}
-                    </code>
+                    <div>
+                        <h1 class="no-margin">404 Not Found</h1>
+                        <p class="no-margin">그런 페이지는 없어요..!</p>
+                        <p class="graytext no-margin-bottom">원래부터 없었거나.. 어쩌면 어느샌가 사라졌을 수도 있어요.</p>
+                    </div>
+                    <div class="button-area">
+                        <button onClick={() => {history.back()}} role="button">돌아가기</button>
+                    </div>
                 </Window>
             </div>
         </>

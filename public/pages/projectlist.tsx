@@ -26,12 +26,14 @@ export default function ProjectListPage() {
     
     return (
         <div class="centered-page">
-            <Window name="프로젝트 목록" style="display: flex; flex-direction: column; gap: 10px;">
-                {
-                    !projectList
-                    ? "로딩 중..."
-                    : projectList.map((project) => <ProjectCard project={project} />)
-                }
+            <Window name="프로젝트 목록">
+                <div style={{display: "flex", flexDirection: "column", gap: "10px"}}>
+                    {
+                        !projectList
+                        ? "로딩 중..."
+                        : projectList.map((project) => <ProjectCard project={project} />)
+                    }
+                </div>
             </Window>
         </div>
     )

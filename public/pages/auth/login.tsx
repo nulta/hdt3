@@ -28,12 +28,10 @@ export default function LoginPage() {
                         <label for='password'>비밀번호</label>
                         <input name="password" type="password" autocomplete="password"/>
                     </form>
-                    <div>
-                        <button style={{float: "right"}} onClick={() => {setModalOpen(false)}} role="button">로그인</button>
+                    <div class="button-area">
+                        <button onClick={() => {setModalOpen(false)}} role="button">로그인</button>
                         <button onClick={() => {location.route("/register")}} role="button" class="text">회원가입...</button>
-                        <div style={{clear: "both"}}></div>
                     </div>
-
                 </ModalWindow>)
             }
             
