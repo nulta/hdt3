@@ -9,10 +9,10 @@ export default function ProjectListPage() {
     async function getProjectList() {
         await new Promise((resolve) => {resolve(1)});
         return [
-            new Project("abcd", "한 프로젝트", "프로젝트 설명"),
-            new Project("efgh", "Project 2", "Description 2"),
-            new Project("ijkl", "Project 3", "Description3"),
-            new Project("mnop", "Project 4", "Description 4"),
+            new Project("abcd", "한 프로젝트", "프로젝트 설명", []),
+            new Project("efgh", "Project 2", "Description 2", []),
+            new Project("ijkl", "Project 3", "Description33", []),
+            new Project("mnop", "Project 4", "Description 4", []),
         ]
     }
 

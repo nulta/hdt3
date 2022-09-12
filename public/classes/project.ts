@@ -1,8 +1,11 @@
+import { Document } from "./document";
+
 export class Project {
     constructor(
-        public id: string,
+        public readonly id: string,
         public name: string,
         public desc: string,
+        public documents: Document[],
     ) {}
 
     getHref() {

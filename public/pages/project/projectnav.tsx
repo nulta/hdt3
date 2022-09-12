@@ -1,15 +1,13 @@
-import { useLocation } from 'preact-iso';
-import { useEffect, useState } from 'preact/hooks';
-import { Project } from '../../classes/project';
+import { useContext } from 'preact/hooks';
+import CachedContext from '../../classes/cachedcontext';
 
-export default function ProjectNav({project}: {project: Project}) {
-    const location = useLocation()
-    const projectRoot = location.path.replace(/^(\/projects\/.+?\/).+/, "$1")
+export default function ProjectNav() {
+    const project = useContext(CachedContext).project
 
     return (
         <aside class="project-nav">
             <h1>
-                <a href={projectRoot}>{project.name}</a>
+                <a href={project.getHref()}>{project.name}</a>
             </h1>
             <p>{project.desc}</p>
         </aside>

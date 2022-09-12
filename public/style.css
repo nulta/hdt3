@@ -363,6 +363,27 @@ body {
     aside.user-widget .user-username {
         font-weight: bold;
     }
+
+    /* DocumentHeader */
+    div.document-header {
+        background-color: #333;
+        color: #bbb;
+        margin-bottom: 20px;
+        padding: 20px;
+    }
+    div.document-header > h1 {
+        color: #eee;
+        margin: 0;
+        margin-bottom: 8px;
+    }
+    div.document-header > h1 > code {
+        color: #555;
+        font-size: 70%;
+    }
+    div.document-header > p {
+        margin: 0;
+    }
+
 /* #endregion Project Page */
 
 /* #region Animations */
